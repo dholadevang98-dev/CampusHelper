@@ -1,0 +1,32 @@
+<resources>
+    <!-- Background Gradient Colors -->
+    <color name="splash_bg_start">#0F172A</color>  <!-- Deep Slate/Midnight -->
+    <color name="splash_bg_end">#1E1B4B</color>    <!-- Deep Indigo/Violet -->
+
+    <!-- Accent Colors -->
+    <color name="splash_accent_primary">#6366F1</color> <!-- Indigo 500 -->
+    <color name="splash_accent_glow">#818CF8</color>    <!-- Indigo 400 -->
+    <color name="accent_violet">#A855F7</color>         <!-- Purple 500 -->
+
+    <!-- Text Colors -->
+    <color name="splash_text_primary">#FFFFFF</color>
+    <color name="splash_text_secondary">#94A3B8</color> <!-- Slate 400 -->
+    <color name="text_muted">#64748B</color>           <!-- Slate 500 -->
+
+    <!-- Card Background & Borders -->
+    <color name="splash_card_bg">#1E293B</color>       <!-- Slate 800 -->
+    <color name="splash_card_border">#334155</color>   <!-- Slate 700 -->
+
+    <!-- Input Field Colors -->
+    <color name="input_bg">#131D31</color>             <!-- Deep Input Slate -->
+    <color name="input_stroke_default">#2E3D52</color>
+    <color name="input_stroke_focus">#6366F1</color>
+    <color name="input_hint">#64748B</color>
+
+    <!-- Button & Divider Colors -->
+    <color name="btn_gradient_start">#6366F1</color>
+    <color name="btn_gradient_end">#8B5CF6</color>
+    <color name="social_btn_bg">#182338</color>
+    <color name="social_btn_border">#334155</color>
+    <color name="divider_color">#263346</color>
+</resources>

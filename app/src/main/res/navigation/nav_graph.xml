@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.devang.campushelper.SplashFragment"
+        android:label="Splash">
+
+        <action
+            android:id="@+id/action_splashFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.devang.campushelper.FirstFragment"
+        android:label="Login">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+
+        <action
+            android:id="@+id/action_FirstFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.devang.campushelper.SecondFragment"
+        android:label="Sign Up">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.devang.campushelper.HomeFragment"
+        android:label="Home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+
+    </fragment>
+
+</navigation>
