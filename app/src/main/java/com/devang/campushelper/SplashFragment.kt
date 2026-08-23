@@ -8,6 +8,7 @@ import android.view.animation.DecelerateInterpolator
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -18,17 +19,10 @@ class SplashFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(
-            R.layout.fragment_splash,
-            container,
-            false
-        )
+        return inflater.inflate(R.layout.fragment_splash, container, false)
     }
 
-    override fun onViewCreated(
-        view: View,
-        savedInstanceState: Bundle?
-    ) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val logoContainer = view.findViewById<View>(R.id.logoContainer)
@@ -68,13 +62,22 @@ class SplashFragment : Fragment() {
             .start()
 
         viewLifecycleOwner.lifecycleScope.launch {
-
-            delay(2000)
+            delay(1800)
 
             if (isAdded) {
-                findNavController().navigate(
-                    R.id.action_splashFragment_to_FirstFragment
-                )
+                val prefHelper = PreferenceHelper(requireContext())
+                val firebaseUser = try {
+                    FirebaseAuth.getInstance().currentUser
+                } catch (e: Exception) {
+                    null
+                }
+
+                // Check persistent one-time login status
+                if (prefHelper.isLoggedIn || firebaseUser != null) {
+                    findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
+                } else {
+                    findNavController().navigate(R.id.action_splashFragment_to_FirstFragment)
+                }
             }
         }
     }
