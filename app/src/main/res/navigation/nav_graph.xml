@@ -6,6 +6,7 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/splashFragment">
 
+    <!-- Splash Screen -->
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.devang.campushelper.SplashFragment"
@@ -17,37 +18,44 @@
 
     </fragment>
 
+    <!-- Login Screen -->
     <fragment
         android:id="@+id/FirstFragment"
         android:name="com.devang.campushelper.FirstFragment"
         android:label="Login">
 
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
-
+        <!-- Login → Home -->
         <action
             android:id="@+id/action_FirstFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
 
+        <!-- Login → Sign Up -->
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+
     </fragment>
 
+    <!-- Sign Up Screen -->
     <fragment
         android:id="@+id/SecondFragment"
         android:name="com.devang.campushelper.SecondFragment"
         android:label="Sign Up">
 
+        <!-- Sign Up → Login -->
         <action
-            android:id="@+id/action_SecondFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
 
     </fragment>
 
+    <!-- Home Screen -->
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.devang.campushelper.HomeFragment"
         android:label="Home">
 
+        <!-- Logout → Login -->
         <action
             android:id="@+id/action_homeFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
