@@ -42,12 +42,11 @@
 
             <ImageView
                 android:id="@+id/ivLogo"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
                 android:layout_gravity="center"
                 android:contentDescription="@string/app_name"
-                android:src="@drawable/ic_campus_logo"
-                app:tint="@color/splash_accent_primary" />
+                android:src="@drawable/ic_campus_logo" />
         </FrameLayout>
 
         <!-- App Title -->

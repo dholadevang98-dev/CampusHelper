@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.devang.campushelper" />
+                  <option name="mobileSdkAppId" value="1:1026347768829:android:adeb44a36580e3ea5c5794" />
+                  <option name="projectId" value="campushelper-14cbb" />
+                  <option name="projectNumber" value="1026347768829" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

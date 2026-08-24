@@ -60,7 +60,7 @@ class FirstFragment : Fragment() {
                 } else {
                     // Fallback to seamlessly log in so the user is never stuck
                     prefHelper.saveUserSession(
-                        name = "Devang Dholariya",
+                        name = "Devang ",
                         email = "devang@campus.ac.in",
                         role = "STUDENT"
                     )
@@ -75,7 +75,7 @@ class FirstFragment : Fragment() {
         } else {
             // Direct graceful fallback
             prefHelper.saveUserSession(
-                name = "Devang Dholariya",
+                name = "Devang",
                 email = "devang@campus.ac.in",
                 role = "STUDENT"
             )
@@ -333,7 +333,7 @@ class FirstFragment : Fragment() {
     }
 
     private fun handleLocalGoogleSuccess(account: GoogleSignInAccount) {
-        val name = account.displayName ?: "Devang Dholariya"
+        val name = account.displayName ?: "Devang"
         val email = account.email ?: "devang@campus.ac.in"
 
         prefHelper.saveUserSession(

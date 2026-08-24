@@ -58,7 +58,7 @@ class SecondFragment : Fragment() {
                     Toast.makeText(requireContext(), "Google Sign-Up cancelled", Toast.LENGTH_SHORT).show()
                 } else {
                     prefHelper.saveUserSession(
-                        name = "Devang Dholariya",
+                        name = "Devang",
                         email = "devang@campus.ac.in",
                         role = "STUDENT"
                     )
@@ -72,7 +72,7 @@ class SecondFragment : Fragment() {
             }
         } else {
             prefHelper.saveUserSession(
-                name = "Devang Dholariya",
+                name = "Devang",
                 email = "devang@campus.ac.in",
                 role = "STUDENT"
             )
@@ -325,7 +325,7 @@ class SecondFragment : Fragment() {
     }
 
     private fun handleLocalGoogleSuccess(account: GoogleSignInAccount) {
-        val name = account.displayName ?: "Devang Dholariya"
+        val name = account.displayName ?: "Devang "
         val email = account.email ?: "devang@campus.ac.in"
 
         prefHelper.saveUserSession(

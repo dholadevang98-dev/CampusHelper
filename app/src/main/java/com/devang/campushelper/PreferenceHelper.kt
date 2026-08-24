@@ -21,7 +21,7 @@ class PreferenceHelper(context: Context) {
         set(value) = prefs.edit().putBoolean(KEY_IS_LOGGED_IN, value).apply()
 
     var userName: String
-        get() = prefs.getString(KEY_USER_NAME, "Devang Dholariya") ?: "Devang Dholariya"
+        get() = prefs.getString(KEY_USER_NAME, "Devang ") ?: "Devang"
         set(value) = prefs.edit().putString(KEY_USER_NAME, value).apply()
 
     var userEmail: String
@@ -54,9 +54,6 @@ class PreferenceHelper(context: Context) {
             .apply()
     }
 
-    /**
-     * Clear all user session data on logout
-     */
     fun clearSession() {
         prefs.edit().clear().apply()
     }
