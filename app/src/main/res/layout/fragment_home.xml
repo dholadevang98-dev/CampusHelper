@@ -7,8 +7,6 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:background="@drawable/bg_splash_gradient">
-
-    <!-- Top-Right Ambient Glow -->
     <View
         android:id="@+id/topGlow"
         android:layout_width="280dp"
@@ -20,7 +18,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Bottom-Left Ambient Glow -->
     <View
         android:id="@+id/bottomGlow"
         android:layout_width="260dp"
@@ -32,7 +29,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- Main Scrollable Content -->
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
@@ -53,14 +49,12 @@
             android:paddingHorizontal="20dp"
             android:paddingTop="28dp">
 
-            <!-- 1. Header Profile & Notification Bar -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <!-- Avatar with Online Green Dot -->
                 <FrameLayout
                     android:id="@+id/btnProfileAvatar"
                     android:layout_width="48dp"
@@ -112,7 +106,7 @@
                         android:textSize="12sp" />
                 </LinearLayout>
 
-                <!-- Notification Bell with Unread Badge -->
+
                 <FrameLayout
                     android:id="@+id/btnNotifications"
                     android:layout_width="42dp"
@@ -146,7 +140,6 @@
                         android:textSize="9sp" />
                 </FrameLayout>
 
-                <!-- Logout Icon -->
                 <FrameLayout
                     android:id="@+id/btnLogout"
                     android:layout_width="42dp"
@@ -166,7 +159,6 @@
                 </FrameLayout>
             </LinearLayout>
 
-            <!-- 2. Role Switcher Segment (Student / Faculty / Admin) -->
             <LinearLayout
                 android:id="@+id/roleSwitcherContainer"
                 android:layout_width="match_parent"
